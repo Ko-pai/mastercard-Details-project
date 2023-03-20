@@ -1,12 +1,12 @@
 body{
-    
+    font-family: 'Space Grotesk', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .main{
     width: 100vw;
-    height: 100vh;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,23 +19,156 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: row;
-    overflow-y: hidden;
+    
 }
 
 /* for left sight */
 .left{
     flex : 4;
+    position: relative;
+    
     
 }
 .firstDivOfLeft{
     width: 400px;
     height: 90%;
     background-color: green;
+    margin-top: 20px;
 }
+.firstDivOfLeft img{
+    width: 100%;
+    height: 100%;
+    
+}
+.front-of-card{
+    background-image: url(photo/bg-card-front.png);
+    width: 350px;
+    height: 200px;
+    
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.start-div{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    
+
+}
+.circle{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 20px;
+    
+}
+.circle1{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.middle-div{
+    width: 90%;
+    height: 70px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+    
+}
+.card-number{
+    font-size: 20px;
+    word-spacing: 8px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.end-div{
+    
+    width: 90%;
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+.date span{
+    letter-spacing: 2px;
+    
+}
+
+
+.back-of-card{
+    background-image: url(photo/bg-card-back.png);
+    background-size: cover;
+    background-position: center;
+    width: 350px;
+    height: 200px;
+    box-shadow: 3px 0px 10px  rgba(177, 172, 172, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    border-radius: 10px;
+    
+}
+.back-number{
+    width: 80px;
+    height: 30px;
+    letter-spacing: 3px;
+    color: white;
+    position: absolute;
+    top: 42%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    left: 65%;
+}
+
 
 
 /* For Right Sight */
 .right{
-    flex : 4;
+    flex : 3;
+    display: flex;
+    flex-direction: column;
     background-color: blue;
+}
+
+
+/* responsive */
+@media (max-width : 1440px){
+    .container{
+        width: 90%;
+    }
+}
+
+/* for mobile */
+@media (max-width: 560px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .right{
+        
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .hh{
+        width: 50px;
+        
+    }
 }

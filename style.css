@@ -1,0 +1,41 @@
+body{
+    
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.container{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+}
+
+/* for left sight */
+.left{
+    flex : 4;
+    
+}
+.firstDivOfLeft{
+    width: 400px;
+    height: 90%;
+    background-color: green;
+}
+
+
+/* For Right Sight */
+.right{
+    flex : 4;
+    background-color: blue;
+}

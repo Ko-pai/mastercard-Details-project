@@ -16,52 +16,67 @@
         <div class="container">
             <div class="left">
                 <div class="firstDivOfLeft">
-                    <img src="photo/bg-main-desktop.png"  />
+                    
                 </div>
-                <div class="front-of-card">
-                    <div class="start-div">
-                        <div class="circle"></div>
-                        <span class="circle1"></span>
-                    </div>
-                    <div class="middle-div">
-                        <span class="card-number">0000 0000 0000 0000</span>
-                    </div>
-                    <div class="end-div">
-                        <span class="name">Jame Macus</span>
-                        <div class="date">
-                            <span>00 </span>/<span>  00</span>
+                <div class="secondDivOfLeft">
+                    <div class="front-of-card">
+                        <div class="start-div">
+                            <div class="circle"></div>
+                            <span class="circle1"></span>
+                        </div>
+                        <div class="middle-div">
+                            <span class="card-number" >0000 0000 0000 0000</span>
+                        </div>
+                        <div class="end-div">
+                            <span class="name">Jame Macus</span>
+                            <div class="date">
+                                <span>00 </span>/<span>  00</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!--  -->
-                <div class="back-of-card">
-                    <div class="back-number">000</div>
+    
+                    <!--  -->
+                    <div class="back-of-card">
+                        <div class="back-number">000</div>
+                    </div>
                 </div>
             </div>
             <div class="right">
-              <div class="hh">
-                hello
-                hello
-                hello
-                hello
-                hello
-                hello
-                hello
-                hello
-                hello
-                hello
-                hello
-                hello
-                hello
-                hello
-                hello
-                hello
+              <div class="right-container">
+                <form >
+                    <div class="firstDivOfRight">
+                        <label>CARDHOLDER NAME</label>
+                        <input type="text" placeholder="e.g . Jame Macus" class="cardname">
+                        <span class="firstErrorText"></span>
+                    </div>
+                    <div class="firstDivOfRight">
+                        <label>CARD NUMBER </label>
+                        <input type="tel" class="cardInput"  data-pattern="xxxx xxxx xxxx xxxx" placeholder="xxxx xxxx xxxx xxxx"  >
+                        <span class="secondErrorText"></span>
+                    </div>
+                    <div class="thirdDivOfRight">
+                        <label>EXP. DATE(MM/YY) <span>CVC</span></label>
+                        <div class="abc">
+                            <input type="text" placeholder="MM" name="month" class="a"/>
+                            <input type="text" placeholder="MM" name="day" class="b"/>
+                            <input type="text" placeholder="MM" name="year" class="c"/>
+                        </div>
+                        <span class="thirdErrorText">
+                            <p>Thank</p>
+                            <p>good good goood</p>
+                        </span>
+                    </div>
+                    <div class="firstDivOfRight">
+                        <button>Confirm</button>
+                    </div>
+                    
+                </form>
               </div>
             </div>
         </div>
     </main>
 
+    <script src="cleave.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

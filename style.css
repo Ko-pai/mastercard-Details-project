@@ -26,14 +26,20 @@ body{
 .left{
     flex : 4;
     position: relative;
-    
-    
 }
 .firstDivOfLeft{
     width: 400px;
     height: 90%;
-    background-color: green;
+    background-size: cover;
     margin-top: 20px;
+    background-image: url(photo/bg-main-desktop.png);
+}
+.secondDivOfLeft{
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    
 }
 .firstDivOfLeft img{
     width: 100%;
@@ -69,7 +75,12 @@ body{
     background-color: white;
     border-radius: 50%;
     margin-right: 20px;
-    
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: hsl(278, 48%, 35%);
 }
 .circle1{
     width: 20px;
@@ -143,10 +154,122 @@ body{
 .right{
     flex : 3;
     display: flex;
+    align-items: center;
+    
+}
+.right-container{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right form{
+    width: 400px;
+    height: 300px;
+    display: flex;
     flex-direction: column;
-    background-color: blue;
+    justify-content: center;
+    align-items: center;
+}
+.firstDivOfRight{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.thirdDivOfRight{
+    width: 80%;
+    
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
 }
 
+.abc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    border-radius: 10px;
+    
+    margin-top: 10px;
+}
+.b{
+    margin-right: 60px;
+    width: 50px;
+    height: 30px;
+    border-radius: 4px;
+    border: 0.5px solid rgba(177, 172, 172, 0.5);
+    box-shadow: 0px 0px 5px rgba(138, 134, 134, 0.5);
+    padding-left: 10px;
+}
+.abc :nth-child(1){
+    width: 50px;
+    height: 30px;
+    border-radius: 4px;
+    border: 0.5px solid rgba(177, 172, 172, 0.5);
+    box-shadow: 0px 0px 5px rgba(138, 134, 134, 0.5);
+    padding-left: 10px;
+    
+}
+
+.abc :nth-child(3){
+    width: 80px;
+    height: 90%;
+    border-radius: 4px;
+    border: 0.5px solid rgba(177, 172, 172, 0.5);
+    box-shadow: 0px 0px 5px rgba(138, 134, 134, 0.5);
+    padding-left: 10px;
+    margin-right: 20px;
+}
+label{
+    font-size: 13px;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+}
+label > span{
+    margin-left: 30px;
+}
+.firstDivOfRight input{
+    width: 90%;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 0.5px solid rgba(177, 172, 172, 0.5);
+    box-shadow: 0px 0px 5px rgba(138, 134, 134, 0.5);
+    margin-top: 10px;
+}
+.firstErrorText,.secondErrorText{
+    margin-top: 5px;
+    font-size: 13px;
+    color: hsl(0, 58%, 54%);
+}
+.thirdErrorText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15px;
+    font-size: 12px;
+    
+    font-family: 'Roboto', sans-serif;
+}
+.thirdErrorText :nth-child(2){
+    margin-right: 20px;
+}
+button{
+    margin-top: 10px;
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    background:hsl(278, 68%, 11%);
+    border: none;
+    color: white;
+}
 
 /* responsive */
 @media (max-width : 1440px){
@@ -154,12 +277,31 @@ body{
         width: 90%;
     }
 }
+@media (max-width : 1024px){
+    .container{
+        width: 100%;
+
+    }
+    .right-container{
+        margin-left: 50px;
+    }
+    .firstDivOfLeft{
+        margin-left: 30px;
+    }
+}
 
 /* for mobile */
 @media (max-width: 560px){
     .container{
+        width: 100vw;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+    .main ::-webkit-scrollbar{
+        display: none;
     }
     .right{
         
@@ -167,8 +309,62 @@ body{
         flex-direction: column;
        
     }
+    .secondDivOfLeft{
+        width: 70%;
+        margin-left: 20px;
+        top: 40px;
+    }
+    .right-container{
+        margin-top: 100px;
+        margin-left: 0px;
+        padding: 30px;
+    }
+    .firstDivOfLeft{
+        width: 125vw;
+        margin: 0;
+        background-image: url(photo/bg-main-mobile.png);
+        background-size: cover;
+    }
     .hh{
         width: 50px;
+
+    }
+    .front-of-card{
+        z-index: 3;
+        top: 40%;
+        
+    }
+    .back-of-card{
+        top: 20px;
         
     }
 }
+form span{
+    text-align: start;
+}
+@media (max-width : 375px){
+    .container{
+        width: 100%;
+        height: 100vh;
+    }
+    .firstDivOfLeft{
+        
+    }
+    .secondDivOfLeft{
+        width: 60%;
+        top: 0px;
+        
+    }
+    .front-of-card{
+        top: 50%;
+        left: 40px;
+    }
+    .back-of-card{
+        top: 10px;
+        left: 50px;
+    }
+    .right-container{
+        margin-bottom: -50px;
+        
+    }
+} 

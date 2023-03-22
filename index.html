@@ -24,7 +24,8 @@
                             <div class="circle"></div>
                             <span class="circle1"></span>
                         </div>
-                        <div class="middle-div">
+                        <div class="middle-div" aria-placeholder="xxxx-xxxx-xxxx-xxxx">
+                            
                             <span class="card-number" >0000 0000 0000 0000</span>
                         </div>
                         <div class="end-div">
@@ -57,17 +58,17 @@
                     <div class="thirdDivOfRight">
                         <label>EXP. DATE(MM/YY) <span>CVC</span></label>
                         <div class="abc">
-                            <input type="text" placeholder="MM" name="month" class="a"/>
-                            <input type="text" placeholder="MM" name="day" class="b"/>
-                            <input type="text" placeholder="MM" name="year" class="c"/>
+                            <input type="text" placeholder="MM" name="month" class="a" maxlength="2"/>
+                            <input type="text" placeholder="Year" name="year" class="b" />
+                            <input type="text" placeholder="eg . 123" name="CVC" class="c" maxlength="3"/>
                         </div>
                         <span class="thirdErrorText">
-                            <p>Thank</p>
-                            <p>good good goood</p>
+                            <p class="monthYearError">Thank</p>
+                            <p class="cvcError"></p>
                         </span>
                     </div>
                     <div class="firstDivOfRight">
-                        <button>Confirm</button>
+                        <button  >Confirm</button>
                     </div>
                     
                 </form>

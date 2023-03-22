@@ -50,7 +50,7 @@ body{
     background-image: url(photo/bg-card-front.png);
     width: 350px;
     height: 200px;
-    
+    transition: all 1.3s ease;
     position: absolute;
     top: 20%;
     left: 20%;
@@ -80,13 +80,14 @@ body{
     font-size: 25px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
-    color: hsl(278, 48%, 35%);
+    color: white
 }
 .circle1{
     width: 20px;
     height: 20px;
     border-radius: 50%;
     border: 1px solid white;
+    
 }
 .middle-div{
     width: 90%;
@@ -103,6 +104,8 @@ body{
     word-spacing: 8px;
     letter-spacing: 3px;
     color: white;
+    opacity: 0.5;
+    transition: opacity 1.5s ease;
 }
 
 .end-div{
@@ -133,7 +136,7 @@ body{
     top: 50%;
     left: 30%;
     border-radius: 10px;
-    
+    transition: all 1.3s ease;
 }
 .back-number{
     width: 80px;
@@ -255,7 +258,8 @@ label > span{
     justify-content: space-between;
     height: 15px;
     font-size: 12px;
-    
+    font-weight: 500;
+    color: red;
     font-family: 'Roboto', sans-serif;
 }
 .thirdErrorText :nth-child(2){
@@ -278,15 +282,24 @@ button{
     }
 }
 @media (max-width : 1024px){
+    
     .container{
         width: 100%;
-
+        overflow-x: hidden;
     }
     .right-container{
         margin-left: 50px;
     }
+    
     .firstDivOfLeft{
         margin-left: 30px;
+    }
+    .front-of-card{
+        top : 20%
+    }
+    .back-of-card{
+        top: 55%;
+        right: 20%;
     }
 }
 
@@ -310,9 +323,10 @@ button{
        
     }
     .secondDivOfLeft{
-        width: 70%;
-        margin-left: 20px;
-        top: 40px;
+        width: 50%;
+        height: 140%;
+        display: flex;
+        flex-direction: column;
     }
     .right-container{
         margin-top: 100px;
@@ -320,7 +334,7 @@ button{
         padding: 30px;
     }
     .firstDivOfLeft{
-        width: 125vw;
+        width: 100vw;
         margin: 0;
         background-image: url(photo/bg-main-mobile.png);
         background-size: cover;
@@ -331,17 +345,18 @@ button{
     }
     .front-of-card{
         z-index: 3;
-        top: 40%;
-        
+        top: calc(100% - 60%);
+        left: 20px;
     }
     .back-of-card{
-        top: 20px;
-        
+        top: calc(80% - 70%);
+        left: 40px;
     }
 }
 form span{
     text-align: start;
 }
+
 @media (max-width : 375px){
     .container{
         width: 100%;
@@ -351,20 +366,21 @@ form span{
         
     }
     .secondDivOfLeft{
-        width: 60%;
-        top: 0px;
         
+        height: 100%;
+        top: 0px;
+        margin-right: 20px;
     }
     .front-of-card{
         top: 50%;
-        left: 40px;
+        left: 5px;
     }
     .back-of-card{
         top: 10px;
-        left: 50px;
+        left: 40px;
     }
     .right-container{
         margin-bottom: -50px;
-        
+       margin-left: 20px;
     }
 } 

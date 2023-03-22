@@ -384,7 +384,7 @@ button:active{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        overflow-x: hidden;
+        
     }
     .main ::-webkit-scrollbar{
         display: none;
@@ -420,7 +420,7 @@ button:active{
     .front-of-card{
         z-index: 2;
         top: calc(100% - 60%);
-        left: 10%;
+        left: 10px;
     }
     .back-of-card{
         top: calc(80% - 70%);
@@ -447,11 +447,11 @@ form span{
     }
     .front-of-card{
         top: 50%;
-        left: 5px;
+        left: -10px;
     }
     .back-of-card{
         top: 10px;
-        left: 40px;
+        left: 25px;
     }
     .right-container{
         margin-bottom: -50px;

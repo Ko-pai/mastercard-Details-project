@@ -9,21 +9,22 @@ let nameInput =document.querySelector(".cardname")
 let numberInput =document.querySelector(".cardInput")
 let numberText =document.querySelector(".card-number")
 let monthInput = document.querySelector(".a")
+let yearInput = document.querySelector(".b")
+let cvcInput = document.querySelector(".c")
 
 
 //selected From html variable
 let form =document.querySelector("form")
-let nameText = document.querySelector(".name")
 let circleText = document.querySelector(".circle")
 let circleColor = document.querySelector(".circle1")
-let yearInput = document.querySelector(".b")
-let cvcInput = document.querySelector(".c")
-let showMonthText = document.querySelector(".M")
-let showYearText = document.querySelector(".Y")
+let afterConfirm =document.querySelector(".afterConfirm")
+let continueButton = document.querySelector(".continueButton")
 
 //text in card variable
 let backNumber = document.querySelector(".back-number")
-
+let nameText = document.querySelector(".name")
+let showMonthText = document.querySelector(".M")
+let showYearText = document.querySelector(".Y")
 
 //button
 let button = document.querySelector("button")
@@ -98,6 +99,9 @@ button.addEventListener("click",(e)=>{
 
         showMonthText.innerHTML = monthText
         showYearText.innerHTML = yearText.slice(-2)
+
+        afterConfirm.style.display = "block"
+        form.style.display ="none"
     }
     /* function*/
     
@@ -124,4 +128,7 @@ button.addEventListener("click",(e)=>{
     // }
 
 
+})
+continueButton.addEventListener("click",()=>{
+    window.location.reload()
 })

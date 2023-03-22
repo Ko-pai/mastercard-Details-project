@@ -46,19 +46,23 @@ body{
     height: 100%;
     
 }
+.name{
+    letter-spacing: 2px;
+}
 .front-of-card{
     background-image: url(photo/bg-card-front.png);
-    width: 350px;
-    height: 200px;
-    
+    width: 340px;
+    height: 180px;
+    transition: all 1.3s ease;
     position: absolute;
     top: 20%;
     left: 20%;
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 5px;
     
 }
 .start-div{
@@ -80,13 +84,15 @@ body{
     font-size: 25px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
-    color: hsl(278, 48%, 35%);
+    color: white
 }
 .circle1{
     width: 20px;
     height: 20px;
     border-radius: 50%;
     border: 1px solid white;
+    
+    
 }
 .middle-div{
     width: 90%;
@@ -103,6 +109,8 @@ body{
     word-spacing: 8px;
     letter-spacing: 3px;
     color: white;
+    opacity: 0.5;
+    transition: opacity 1.5s ease;
 }
 
 .end-div{
@@ -126,14 +134,14 @@ body{
     background-image: url(photo/bg-card-back.png);
     background-size: cover;
     background-position: center;
-    width: 350px;
-    height: 200px;
+    width: 340px;
+    height: 180px;
     box-shadow: 3px 0px 10px  rgba(177, 172, 172, 0.5);
     position: absolute;
     top: 50%;
     left: 30%;
     border-radius: 10px;
-    
+    transition: all 1.3s ease;
 }
 .back-number{
     width: 80px;
@@ -163,6 +171,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .right form{
     width: 400px;
@@ -172,7 +181,63 @@ body{
     justify-content: center;
     align-items: center;
 }
-.firstDivOfRight{
+.afterConfirm{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 34%;
+    display: none;
+    transition: all 1s ease;
+}
+.confirmCircle{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkIconContainer{
+    width: 80px;
+    height : 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(hsl(278, 77%, 40%),hsla(278, 84%, 34%,0.8))
+}
+.checkIconContainer i{
+    font-size: 40px;
+    
+}
+.thankTextDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.thankTextDiv h1{
+    letter-spacing: 3px;
+}
+.thankTextDiv p{
+    letter-spacing: 3px;
+    font-size: 15px;
+    opacity: 0.7;
+}
+.continueButton{
+    width: 300px;
+    height: 40px;
+    background-color: hsl(278, 68%, 11%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-left: 50px;
+}
+.firstDivOfRight,.firstDivOfRight1{
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -247,7 +312,8 @@ label > span{
 .firstErrorText,.secondErrorText{
     margin-top: 5px;
     font-size: 13px;
-    color: hsl(0, 58%, 54%);
+    color: red;
+    font-family: 'Roboto', sans-serif;
 }
 .thirdErrorText{
     display: flex;
@@ -255,20 +321,27 @@ label > span{
     justify-content: space-between;
     height: 15px;
     font-size: 12px;
-    
+    font-weight: 500;
+    color: rgb(241, 76, 76);
     font-family: 'Roboto', sans-serif;
 }
 .thirdErrorText :nth-child(2){
     margin-right: 20px;
 }
-button{
+.firstDivOfRight1 button{
     margin-top: 10px;
-    width: 90%;
-    height: 30px;
+    width: 300px;
+    height: 40px;
     border-radius: 10px;
     background:hsl(278, 68%, 11%);
     border: none;
     color: white;
+    position: absolute;
+    z-index: 1;
+}
+button:active{
+    background: linear-gradient(hsla(271, 88%, 46%,0.7),hsl(246, 69%, 53%));
+    box-shadow: 0px 4px 12px rgb(110, 105, 105);
 }
 
 /* responsive */
@@ -278,15 +351,28 @@ button{
     }
 }
 @media (max-width : 1024px){
+    
     .container{
         width: 100%;
-
+        overflow-x: hidden;
     }
     .right-container{
         margin-left: 50px;
     }
+    
     .firstDivOfLeft{
         margin-left: 30px;
+    }
+    .secondDivOfLeft{
+        width: 70%;
+    }
+    .front-of-card{
+        top : 20%;
+        left: 30%;
+    }
+    .back-of-card{
+        top: 50%;
+        left: 20%;
     }
 }
 
@@ -298,7 +384,7 @@ button{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        overflow-x: hidden;
+        
     }
     .main ::-webkit-scrollbar{
         display: none;
@@ -310,9 +396,11 @@ button{
        
     }
     .secondDivOfLeft{
-        width: 70%;
+        width: 100%;
+        height: 140%;
+        display: flex;
+        flex-direction: column;
         margin-left: 20px;
-        top: 40px;
     }
     .right-container{
         margin-top: 100px;
@@ -320,7 +408,7 @@ button{
         padding: 30px;
     }
     .firstDivOfLeft{
-        width: 125vw;
+        width: 100vw;
         margin: 0;
         background-image: url(photo/bg-main-mobile.png);
         background-size: cover;
@@ -330,18 +418,19 @@ button{
 
     }
     .front-of-card{
-        z-index: 3;
-        top: 40%;
-        
+        z-index: 2;
+        top: calc(100% - 60%);
+        left: 10px;
     }
     .back-of-card{
-        top: 20px;
-        
+        top: calc(80% - 70%);
+        left: 30px;
     }
 }
 form span{
     text-align: start;
 }
+
 @media (max-width : 375px){
     .container{
         width: 100%;
@@ -351,20 +440,24 @@ form span{
         
     }
     .secondDivOfLeft{
-        width: 60%;
-        top: 0px;
         
+        height: 100%;
+        top: 0px;
+        margin-right: 20px;
     }
     .front-of-card{
         top: 50%;
-        left: 40px;
+        left: -10px;
     }
     .back-of-card{
         top: 10px;
-        left: 50px;
+        left: 25px;
     }
     .right-container{
         margin-bottom: -50px;
-        
+       margin-left: 20px;
+    }
+    .afterConfirm{
+        top:0;
     }
 } 

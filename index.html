@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+        <script src="https://kit.fontawesome.com/97aa3d1d1c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link type="image/png" sizes="96x96" rel="icon" href="photo/icons8-magnetic-card-96.png">
     <title>Interactive Card Details</title>
 </head>
 <body>
@@ -25,12 +26,13 @@
                             <span class="circle1"></span>
                         </div>
                         <div class="middle-div">
+                            
                             <span class="card-number" >0000 0000 0000 0000</span>
                         </div>
                         <div class="end-div">
-                            <span class="name">Jame Macus</span>
+                            <span class="name">Name...</span>
                             <div class="date">
-                                <span>00 </span>/<span>  00</span>
+                                <span class="M">00 </span>/&nbsp;<span class="Y">00</span>
                             </div>
                         </div>
                     </div>
@@ -51,26 +53,38 @@
                     </div>
                     <div class="firstDivOfRight">
                         <label>CARD NUMBER </label>
-                        <input type="tel" class="cardInput"  data-pattern="xxxx xxxx xxxx xxxx" placeholder="xxxx xxxx xxxx xxxx"  >
+                        <input type="tel" class="cardInput"  placeholder="xxxx xxxx xxxx xxxx"  >
                         <span class="secondErrorText"></span>
                     </div>
                     <div class="thirdDivOfRight">
                         <label>EXP. DATE(MM/YY) <span>CVC</span></label>
                         <div class="abc">
-                            <input type="text" placeholder="MM" name="month" class="a"/>
-                            <input type="text" placeholder="MM" name="day" class="b"/>
-                            <input type="text" placeholder="MM" name="year" class="c"/>
+                            <input type="text" placeholder="MM" name="month" class="a" maxlength="2"/>
+                            <input type="text" placeholder="Year" name="year" class="b" maxlength="4"/>
+                            <input type="text" placeholder="eg . 123" name="CVC" class="c" maxlength="3"/>
                         </div>
                         <span class="thirdErrorText">
-                            <p>Thank</p>
-                            <p>good good goood</p>
+                            <p class="monthYearError"></p>
+                            <p class="cvcError"></p>
                         </span>
                     </div>
-                    <div class="firstDivOfRight">
+                    <div class="firstDivOfRight1">
                         <button>Confirm</button>
                     </div>
                     
                 </form>
+                <div class="afterConfirm">
+                    <div class="confirmCircle">
+                        <div class="checkIconContainer">
+                            <i class="fa-solid fa-check" style="color: #fafafa;"></i>
+                        </div>
+                    </div>
+                    <div class="thankTextDiv">
+                        <h1>THANK YOU!</h1>
+                        <p>We're added your card Details.</p>
+                    </div>
+                    <button class="continueButton">Continue</button>
+                </div>
               </div>
             </div>
         </div>
@@ -80,3 +94,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+<!-- remaining to add new feature -->
